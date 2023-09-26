@@ -1,0 +1,80 @@
+.container-login {
+  width: 100%;
+  height: max-content;
+  background-color: var(--aksen-putih);
+}
+
+.login {
+  max-width: 1200px;
+  height: 100vh;
+  margin: auto;
+  padding: 100px 20px;
+  background-color: var(--aksen-putih);
+  color: var(--aksen-hitam);
+}
+
+.login form {
+  max-width: 100%;
+  height: max-content;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: var(--aksen-putih-terang);
+  border-radius: 10px;
+  /* max-width: 100%;
+  height: max-content;
+  
+  background-color: var(--aksen-putih-terang); */
+}
+
+form input {
+  width: 99%;
+  padding: 10px;
+  border: 2px solid var(--aksen-hitam);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+form .username-sc {
+  display: flex;
+}
+
+form .username-sc i {
+  margin-top: 15px;
+}
+form .password-sc {
+  display: flex;
+}
+
+form .password-sc i {
+  margin-top: 15px;
+}
+
+form .jumlah-followers-sc {
+  display: flex;
+}
+
+form .jumlah-followers-sc i {
+  margin-top: 15px;
+}
+
+form i {
+  margin-left: -40px;
+}
+
+form button {
+  background-color: var(--sekunder);
+  color: var(--aksen-putih);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+form button i {
+  margin-left: 0;
+}
+
+form a button:hover {
+  cursor: pointer;
+}

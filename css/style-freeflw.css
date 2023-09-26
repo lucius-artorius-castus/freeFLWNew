@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --premier: #041562;
+  --sekunder: #11468f;
+  --aksen-merah: #da1212;
+  --aksen-putih: #eeeeee;
+  --aksen-putih-terang: #ffffff;
+  --aksen-hitam: #000000;
+}
+
+body {
+  width: auto;
+  height: max-content;
+  background-color: black;
+}
+
+/* nav */
+
+.container-nav {
+  width: 100%;
+  height: max-content;
+  background-color: var(--premier);
+  position: fixed;
+}
+
+nav {
+  max-width: 1200px;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--premier);
+  color: var(--aksen-putih);
+  margin: auto;
+  z-index: 9;
+}
+.sticky {
+  background-color: rgba(52, 49, 69, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+nav span {
+  font-weight: 700;
+  line-height: 80px;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  line-height: 80px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li .active {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--aksen-putih);
+}
+
+nav ul li a {
+  color: var(--aksen-putih);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--aksen-putih);
+}
+
+nav ul li a button {
+  background-color: var(--sekunder);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--aksen-putih);
+}
+
+nav ul li a button:hover {
+  cursor: pointer;
+}
+
+/* landing */
+
+.container-landing {
+  width: 100%;
+  height: max-content;
+  background-color: var(--premier);
+}
+
+.landing {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 150px 20px;
+  background-color: var(--premier);
+  color: var(--aksen-putih);
+}
+
+.landing .text-landing h1 {
+  margin-bottom: 10px;
+}
+
+.text-landing .text-keunggulan {
+  margin: 50px 0px 20px;
+  font-weight: bold;
+}
+
+.text-landing button {
+  background-color: var(--sekunder);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.text-landing .login {
+  background: none;
+  border: 2px solid var(--sekunder);
+  transition: all 0.3s ease-in-out;
+}
+
+.text-landing .login:hover {
+  background-color: var(--sekunder);
+}
+
+.text-landing button a {
+  text-decoration: none;
+  color: var(--aksen-putih);
+}
+
+.landing dotlottie-player {
+  max-width: 400px;
+  float: right;
+  margin-top: -350px;
+  margin-right: 50px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  z-index: 2;
+}
+
+/* layanan */
+
+.container-layanan {
+  width: 100%;
+  height: max-content;
+  background-color: var(--aksen-putih);
+}
+
+.layanan {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 150px 20px;
+  background-color: var(--aksen-putih);
+  color: var(--aksen-hitam);
+}
+
+.layanan .all-card-layanan {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.all-card-layanan .card-layanan {
+  max-width: 330px;
+  height: max-content;
+  background-color: var(--aksen-putih-terang);
+  color: var(--aksen-hitam);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card-layanan a button {
+  background-color: var(--sekunder);
+  color: var(--aksen-putih);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.card-layanan a button:hover {
+  cursor: pointer;
+}
+
+/* free followers */
+
+.container-followers {
+  width: 100%;
+  height: max-content;
+  background-color: var(--aksen-putih-terang);
+}
+
+.followers {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 150px 20px;
+  background-color: var(--aksen-putih-terang);
+  color: var(--aksen-hitam);
+}
+
+.followers .input-followers {
+  max-width: 100%;
+  height: max-content;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: var(--aksen-putih);
+  border-radius: 10px;
+}
+
+.input-followers input {
+  width: 99%;
+  padding: 10px;
+  border: 2px solid var(--aksen-hitam);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.input-followers i {
+  margin-left: -40px;
+}
+
+.input-followers button {
+  background-color: var(--sekunder);
+  color: var(--aksen-putih);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.input-followers button:hover {
+  cursor: pointer;
+}
+
+/* s */
+.c-s {
+  width: 100%;
+  min-height: 300px;
+  height: max-content;
+  background-color: var(--premier);
+}
+
+.s {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 100px 20px;
+  background-color: var(--premier);
+  color: var(--aksen-putih);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.s .s-hd {
+  width: 100%;
+  text-align: center;
+  font-size: 34px;
+}
+
+.s h1 {
+  font-size: 40px;
+}
+
+.s .pengguna {
+  max-width: 300px;
+  height: max-content;
+}
+
+.s .pengguna h1 {
+}
+
+/* about */
+
+.container-about {
+  width: 100%;
+  height: max-content;
+  background-color: var(--aksen-putih);
+}
+
+.about {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 150px 20px;
+  background-color: var(--aksen-putih);
+  color: var(--aksen-hitam);
+  /* text-align: center; */
+}
+
+.about dotlottie-player {
+  max-width: 400px;
+  margin-left: 100px;
+}
+
+.about .text-about {
+  max-width: 500px;
+  float: right;
+  margin-top: -300px;
+  margin-right: 50px;
+}
