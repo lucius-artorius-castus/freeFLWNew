@@ -10,7 +10,7 @@
     <div class="container-nav">
       <nav>
         <span><h1>freeFLW</h1></span>
-        <ul>
+        <ul class="hidden-ul">
           <li>
             <a href="#home">Home</a>
           </li>
@@ -24,7 +24,7 @@
             <a href="#tentang">Tentang</a>
           </li>
           <li>
-            <a href="#">Kontak</a>
+            <a href="#contact">Kontak</a>
           </li>
           <li>
             <a href="./login/login.html">
@@ -32,6 +32,9 @@
             </a>
           </li>
         </ul>
+        <div class="iconbar" id="icon-nav">
+          <i class="fa-solid fa-bars" id="icon"></i>
+        </div>
       </nav>
     </div>
 
@@ -69,12 +72,13 @@
               Followers aktif
             </p>
           </div>
-          <button>
-            <a href="#followers">Dapatkan Followers Gratis</a>
-          </button>
-          <button class="login"><a href="#">Login</a></button>
+          <a href="#followers">
+            <button>Dapatkan Followers Gratis</button>
+          </a>
+          <a href="./login/login.html">
+            <button class="login">Login</button>
+          </a>
         </div>
-
         <dotlottie-player
           src="https://lottie.host/e89b1db4-eb95-45f2-a9df-9c0c6dae2d1e/piaEFUGUBc.lottie"
           background="transparent"
@@ -95,51 +99,40 @@
         </p>
         <div class="all-card-layanan">
           <div class="card-layanan">
+            <div class="img-card-layanan">
+              <img src="./assets/followers-instagram.png" alt="" />
+            </div>
             <h2>
               Auto Followers
               <i class="fa-regular fa-circle-check"></i>
             </h2>
-            <p>Dapatkan 1000 Followers setiap harinya!.</p>
+            <p>Dapatkan 1000 Followers Instagram setiap harinya!.</p>
             <br />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Obcaecati ipsam excepturi molestias ad voluptatem cum velit
-              molestiae quas possimus. Minima, ratione. Facilis, exercitationem.
-              Tenetur ipsam iusto autem itaque reprehenderit odit.
+              Fitur ini memungkinkan kamu untuk menambah jumlah Followers
+              Instagram kamu dengan cepat. Kamu bisa menggunakan fitur ini
+              dengan Gratis tanpa biaya seperpun. Kamu bisa menggunakan fitur
+              ini dimanapun dan kapanpun.
             </p>
             <a href="#">
               <button>Dapatkan Sekarang</button>
             </a>
           </div>
           <div class="card-layanan">
+            <div class="img-card-layanan">
+              <img src="./assets/likes-instagram.png" alt="" />
+            </div>
             <h2>
               Auto Likes
               <i class="fa-regular fa-circle-check"></i>
             </h2>
-            <p>Dapatkan 1000 Followers setiap harinya!.</p>
+            <p>Dapatkan 10.000 Likes Instagram setiap harinya!.</p>
             <br />
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Obcaecati ipsam excepturi molestias ad voluptatem cum velit
-              molestiae quas possimus. Minima, ratione. Facilis, exercitationem.
-              Tenetur ipsam iusto autem itaque reprehenderit odit.
-            </p>
-            <a href="#">
-              <button>Dapatkan Sekarang</button>
-            </a>
-          </div>
-          <div class="card-layanan">
-            <h2>
-              Auto Comment
-              <i class="fa-regular fa-circle-check"></i>
-            </h2>
-            <p>Dapatkan 1000 Followers setiap harinya!.</p>
-            <br />
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Obcaecati ipsam excepturi molestias ad voluptatem cum velit
-              molestiae quas possimus. Minima, ratione. Facilis, exercitationem.
-              Tenetur ipsam iusto autem itaque reprehenderit odit.
+              Fitur ini memungkinkan kamu untuk menambah jumlah Likes Instagram
+              kamu dengan cepat. Kamu bisa menggunakan fitur ini dengan Gratis
+              tanpa biaya seperpun. Kamu bisa menggunakan fitur ini dimanapun
+              dan kapanpun.
             </p>
             <a href="#">
               <button>Dapatkan Sekarang</button>
@@ -161,26 +154,32 @@
         <div class="input-followers">
           <h2>Dapatkan Followers Gratis</h2>
           <label for="username">Masukan Username Instagram</label>
-          <input
-            type="text"
-            name="username"
-            class="username"
-            id="username"
-            placeholder="free_flw"
-            required
-          />
-          <i class="fa-solid fa-at"></i>
+          <div class="username-sc">
+            <input
+              type="text"
+              name="username"
+              class="username"
+              id="username"
+              placeholder="free_flw"
+              required
+            />
+            <i class="fa-solid fa-at"></i>
+          </div>
+
           <br />
           <label for="jumlah-followers">Masukan Jumlah Followers</label>
-          <input
-            type="number"
-            name="number"
-            class="jumlah-followers"
-            id="jumlah-followers"
-            placeholder="Masukan jumlah followers"
-            required
-          />
-          <i class="fa-solid fa-user"></i>
+          <div class="password-sc">
+            <input
+              type="number"
+              name="number"
+              class="jumlah-followers"
+              id="jumlah-followers"
+              placeholder="Masukan jumlah followers"
+              required
+            />
+            <i class="fa-solid fa-user"></i>
+          </div>
+
           <button onclick="flwLP()" id="freeFlwLP">Dapatkan Followers</button>
         </div>
       </div>
@@ -218,12 +217,126 @@
         <div class="text-about">
           <h1>Tentang Kami</h1>
           <p>
-            FreeFLW adalah situs web yang menyediakan layanan instagram secara
+            FreeFLW adalah website yang menyediakan layanan instagram secara
             gratis. Salah satu layanan kami yang banyak digunakan adalah
-            followers instagram. layanan kami aktif 24/7 anda bisa
-            menggunakannya kapan saja.
+            penambah followers instagram. layanan kami 100% gratis tanpa ada
+            biaya apapun. layanan kami aktif 24/7 kamu bisa menggunakannya kapan
+            saja dan dimana saja.
           </p>
         </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div class="container-contact">
+      <div class="contact" id="contact">
+        <div class="text-contact">
+          <h1>Kontak</h1>
+          <p>Punya pertanyaan? hubungi kami segera!</p>
+        </div>
+        <form action="">
+          <label for="nama">Nama</label>
+          <br />
+          <input type="text" name="name" id="nama" required />
+          <br />
+          <br />
+          <label for="email">Email</label>
+          <br />
+          <input type="email" name="email" id="email" required />
+          <br />
+          <br />
+          <label for="message">Pesan</label>
+          <br />
+          <textarea name="message" id="message" required></textarea>
+          <br />
+          <input type="submit" value="Kirim" class="btn-kirim-contact" />
+        </form>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-footer">
+      <footer>
+        <div class="about-in-footer">
+          <h2>Tentang Kami</h2>
+          <p>
+            FreeFLW adalah website yang menyediakan layanan instagram secara
+            gratis. Salah satu layanan kami yang banyak digunakan adalah
+            penambah followers instagram. layanan kami 100% gratis tanpa ada
+            biaya apapun. layanan kami aktif 24/7 kamu bisa menggunakannya kapan
+            saja dan dimana saja.
+          </p>
+        </div>
+        <div class="link-in-footer">
+          <h2>Link Navigasi</h2>
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#layanan">Layanan</a>
+            </li>
+            <li>
+              <a href="#followers">Free Followers</a>
+            </li>
+            <li>
+              <a href="#tentang">Tentang</a>
+            </li>
+            <li>
+              <a href="#contact">Kontak</a>
+            </li>
+            <li>
+              <a href="./login/login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+        <div class="panduan-pengguna">
+          <h2>Panduan Pengguna</h2>
+          <ul>
+            <li>
+              <a href="#">Cara penggunaan</a>
+            </li>
+            <li>
+              <a href="#">Cara login di freeFLW</a>
+            </li>
+            <li>
+              <a href="#">Menggunakan fitur followers</a>
+            </li>
+            <li>
+              <a href="#">Menggunakan fitur likes</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-in-footer">
+          <h2>Kontak</h2>
+          <ul>
+            <li class="li-contact-in-footer">
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+              </p>
+              <p>
+                916 Southwood Blvd #1b,<br />Incline Village, North Carolina,
+                <br />
+                89451, United States.
+              </p>
+            </li>
+            <li class="li-contact-in-footer">
+              <p>
+                <i class="fa-solid fa-phone"></i>
+              </p>
+              <p>(775) 832-0100</p>
+            </li>
+            <li class="li-contact-in-footer">
+              <p>
+                <i class="fa-solid fa-envelope"></i>
+              </p>
+              <p>freeflw.real@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i> FreeFLW - 2023.</p>
       </div>
     </div>
 
