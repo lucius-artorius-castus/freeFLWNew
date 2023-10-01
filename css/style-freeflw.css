@@ -20,7 +20,6 @@
 body {
   width: auto;
   height: max-content;
-  background-color: black;
 }
 
 /* nav */
@@ -28,8 +27,10 @@ body {
 .container-nav {
   width: 100%;
   height: max-content;
-  background-color: var(--premier);
+  background: none;
   position: fixed;
+  z-index: 9;
+  padding: 0 10px;
 }
 
 nav {
@@ -38,14 +39,18 @@ nav {
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  background-color: var(--premier);
+  background: none;
   color: var(--aksen-putih);
   margin: auto;
   z-index: 9;
+  transition: all 0.2s ease-in;
 }
+
 .sticky {
   background-color: rgba(52, 49, 69, 0.6);
   backdrop-filter: blur(5px);
+  margin: 10px auto;
+  border-radius: 40px;
 }
 
 nav span {
@@ -93,12 +98,23 @@ nav ul li a button:hover {
   cursor: pointer;
 }
 
+nav .iconbar {
+  display: none;
+}
+
+nav #icon {
+  line-height: 80px;
+  display: none;
+}
+
 /* landing */
 
 .container-landing {
   width: 100%;
   height: max-content;
-  background-color: var(--premier);
+  background-image: url(../assets/bg-landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .landing {
@@ -106,11 +122,12 @@ nav ul li a button:hover {
   height: max-content;
   margin: auto;
   padding: 150px 20px;
-  background-color: var(--premier);
+  background: none;
   color: var(--aksen-putih);
 }
 
 .landing .text-landing h1 {
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
@@ -121,26 +138,34 @@ nav ul li a button:hover {
 
 .text-landing button {
   background-color: var(--sekunder);
-  border: none;
+  border: 2px solid var(--sekunder);
+
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 16px;
+  color: var(--aksen-putih);
+}
+
+.text-landing button:hover {
+  cursor: pointer;
 }
 
 .text-landing .login {
   background: none;
   border: 2px solid var(--sekunder);
   transition: all 0.3s ease-in-out;
+  color: var(--aksen-putih);
 }
 
 .text-landing .login:hover {
   background-color: var(--sekunder);
+  cursor: pointer;
 }
 
-.text-landing button a {
+/* .text-landing button a {
   text-decoration: none;
   color: var(--aksen-putih);
-}
+} */
 
 .landing dotlottie-player {
   max-width: 400px;
@@ -149,7 +174,6 @@ nav ul li a button:hover {
   margin-right: 50px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  z-index: 2;
 }
 
 /* layanan */
@@ -176,16 +200,25 @@ nav ul li a button:hover {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .all-card-layanan .card-layanan {
-  max-width: 330px;
+  max-width: 500px;
   height: max-content;
   background-color: var(--aksen-putih-terang);
   color: var(--aksen-hitam);
   padding: 20px;
   border-radius: 10px;
+}
+
+.card-layanan .img-card-layanan {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.img-card-layanan img {
+  max-width: 250px;
 }
 
 .card-layanan a button {
@@ -219,13 +252,35 @@ nav ul li a button:hover {
   color: var(--aksen-hitam);
 }
 
+.followers h1,
+.followers p {
+  text-align: center;
+}
+
 .followers .input-followers {
-  max-width: 100%;
+  max-width: 700px;
   height: max-content;
   padding: 20px;
+  margin: auto;
   margin-top: 20px;
   background-color: var(--aksen-putih);
   border-radius: 10px;
+}
+
+.input-followers .username-sc {
+  display: flex;
+}
+
+.input-followers .username-sc i {
+  margin-top: 15px;
+}
+
+.input-followers .password-sc {
+  display: flex;
+}
+
+.input-followers .password-sc i {
+  margin-top: 15px;
 }
 
 .input-followers input {
@@ -309,7 +364,6 @@ nav ul li a button:hover {
   padding: 150px 20px;
   background-color: var(--aksen-putih);
   color: var(--aksen-hitam);
-  /* text-align: center; */
 }
 
 .about dotlottie-player {
@@ -322,4 +376,190 @@ nav ul li a button:hover {
   float: right;
   margin-top: -300px;
   margin-right: 50px;
+}
+
+/* contact */
+
+.container-contact {
+  width: 100%;
+  height: max-content;
+  background-color: var(--aksen-putih-terang);
+}
+
+.contact {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 150px 20px;
+  background-color: var(--aksen-putih-terang);
+  color: var(--aksen-hitam);
+}
+
+.contact h1,
+.contact p {
+  text-align: center;
+}
+
+.contact form {
+  max-width: 700px;
+  height: max-content;
+  border-radius: 10px;
+  margin: auto;
+  padding: 50px;
+}
+
+.contact form input {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #202020;
+  padding: 3px;
+}
+
+.contact form input:focus {
+  border: none;
+}
+
+.contact form textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 30px;
+  max-height: 100px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #202020;
+}
+
+.contact .btn-kirim-contact {
+  background-color: var(--sekunder);
+  color: var(--aksen-putih);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.contact .btn-kirim-contact:hover {
+  cursor: pointer;
+}
+
+/* footer */
+
+.container-footer {
+  width: 100%;
+  height: max-content;
+  background-color: var(--premier);
+}
+
+footer {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 80px 20px;
+  background-color: var(--premier);
+  color: var(--aksen-putih);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .about-in-footer {
+  max-width: 400px;
+}
+
+footer ul li {
+  list-style: none;
+  margin: 3px;
+}
+
+footer ul li .active {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--aksen-putih);
+}
+
+footer ul li a {
+  color: var(--aksen-putih);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+footer ul li a:hover {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--aksen-putih);
+}
+
+.li-contact-in-footer {
+  display: flex;
+  gap: 5px;
+}
+
+.copyright {
+  text-align: center;
+  color: var(--aksen-putih);
+  padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  nav .hidden-ul {
+    max-width: 400px;
+    height: 100vh;
+    padding: 30px;
+    margin-top: 90px;
+    display: inline-block;
+    margin-right: -1000px;
+    background-color: var(--premier);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .show-ul {
+    max-width: 400px;
+    height: 100vh;
+    padding: 30px;
+    margin-top: 90px;
+    margin-right: -100px;
+    background-color: rgba(52, 49, 69, 0.6);
+    border-radius: 40px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav .iconbar {
+    display: block;
+  }
+
+  nav #icon {
+    display: block;
+  }
+
+  /* Landing */
+
+  .landing .text-landing h1 {
+    font-size: 35px;
+  }
+
+  .landing dotlottie-player {
+    max-width: 300px;
+    float: none;
+    margin-top: 30px;
+    margin-right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 2;
+  }
+
+  /* about */
+
+  .about dotlottie-player {
+    max-width: 300px;
+    margin-left: 0;
+    z-index: -1;
+  }
+
+  .about .text-about {
+    max-width: 500px;
+    float: none;
+    margin-top: 0;
+    margin-right: 0;
+  }
 }
