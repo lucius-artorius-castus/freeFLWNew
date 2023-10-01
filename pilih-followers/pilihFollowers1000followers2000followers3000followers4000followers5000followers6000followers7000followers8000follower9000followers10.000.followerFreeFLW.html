@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style-freeflw.css" />
+    <link rel="stylesheet" href="../css/pilih-followers.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <!-- sweetalert 2 -->
+    <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css" />
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+    <title>freeFLW | Layanan</title>
+  </head>
+  <body class="for-bg">
+    <div class="container-nav">
+      <nav>
+        <span><h1>freeFLW</h1></span>
+        <ul class="hidden-ul">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#layanan" class="active">Layanan</a>
+          </li>
+          <li>
+            <a href="#followers">Free Followers</a>
+          </li>
+          <li>
+            <a href="#tentang">Tentang</a>
+          </li>
+          <li>
+            <a href="#contact">Kontak</a>
+          </li>
+        </ul>
+        <div class="iconbar" id="icon-nav">
+          <i class="fa-solid fa-bars" id="icon"></i>
+        </div>
+      </nav>
+    </div>
+    <!-- layanan kami -->
+    <div class="container-layanan-page">
+      <div class="layanan-page">
+        <h1>Layanan Kami</h1>
+        <div class="all-card-layanan-page">
+          <div class="card-layanan-page">
+            <img src="../assets/followers-instagram.png" alt="" />
+            <h3>Auto Followers Instagram</h3>
+            <p>
+              Fitur ini memungkinkan kamu untuk menambah jumlah Followers
+              Instagram kamu dengan cepat. Kamu bisa menggunakan fitur ini
+              dengan Gratis tanpa biaya seperpun. Kamu bisa menggunakan fitur
+              ini dimanapun dan kapanpun.
+            </p>
+            <a href="#followers-and-likes">
+              <button onclick="showFollowersPage()">Gunakan Sekarang</button>
+            </a>
+          </div>
+          <div class="card-layanan-page">
+            <img src="../assets/likes-instagram.png" alt="" />
+            <h3>Auto Likes Instagram</h3>
+            <p>
+              Fitur ini memungkinkan kamu untuk menambah jumlah Likes Instagram
+              kamu dengan cepat. Kamu bisa menggunakan fitur ini dengan Gratis
+              tanpa biaya seperpun. Kamu bisa menggunakan fitur ini dimanapun
+              dan kapanpun.
+            </p>
+            <a href="#followers-and-likes">
+              <button onclick="showLikesPage()">Gunakan Sekarang</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layanan followers and likes page -->
+    <div class="container-followers-and-likes-page">
+      <div class="followers-and-likes-page" id="followers-and-likes">
+        <!-- followers page -->
+        <div class="card-followers-instagram-page" id="followers-page">
+          <h1>Auto Followers Instagram</h1>
+          <!-- <label for="input-username">Username</label>
+          <br />
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="free-flw"
+            required
+          /> -->
+          <div class="draf-all-followers">
+            <div class="card-draf-followers">
+              <label for="followers-label-1">
+                <h1>100<br />Followers</h1>
+                <p>
+                  100 Followers instagram. Followers akan masuk ke akun kamu
+                  dalam waktu kurang lebih 12 jam.
+                </p>
+                <input
+                  type="radio"
+                  name="follower-label"
+                  id="followers-label-1"
+                  class="radio"
+                />
+              </label>
+            </div>
+            <div class="card-draf-followers">
+              <label for="followers-label-2">
+                <h1>200<br />Followers</h1>
+                <p>
+                  200 Followers instagram. Followers akan masuk ke akun kamu
+                  dalam waktu kurang lebih 12 jam.
+                </p>
+                <input
+                  type="radio"
+                  name="follower-label"
+                  id="followers-label-2"
+                  class="radio"
+                />
+              </label>
+            </div>
+            <div class="card-draf-followers">
+              <label for="followers-label-3">
+                <h1>300<br />Followers</h1>
+                <p>
+                  300 Followers instagram. Followers akan masuk ke akun kamu
+                  dalam waktu kurang lebih 12 jam.
+                </p>
+                <input
+                  type="radio"
+                  name="follower-label"
+                  id="followers-label-3"
+                  class="radio"
+                />
+              </label>
+            </div>
+            <div class="card-draf-followers">
+              <label for="followers-label-4">
+                <h1>400<br />Followers</h1>
+                <p>
+                  400 Followers instagram. Followers akan masuk ke akun kamu
+                  dalam waktu kurang lebih 12 jam.
+                </p>
+                <input
+                  type="radio"
+                  name="follower-label"
+                  id="followers-label-4"
+                  class="radio"
+                />
+              </label>
+            </div>
+            <div class="card-draf-followers">
+              <label for="followers-label-5">
+                <h1>500<br />Followers</h1>
+                <p>
+                  500 Followers instagram. Followers akan masuk ke akun kamu
+                  dalam waktu kurang lebih 12 jam.
+                </p>
+                <input
+                  type="radio"
+                  name="follower-label"
+                  id="followers-label-5"
+                  class="radio"
+                />
+              </label>
+            </div>
+            <div class="card-draf-followers">
+              <label for="followers-label-6">
+                <h1>1.000<br />Followers</h1>
+                <p>
+                  1.000 Followers instagram. Followers akan masuk ke akun kamu
+                  dalam waktu kurang lebih 12 jam.
+                </p>
+                <h3>BETA</h3>
+                <input
+                  type="radio"
+                  name="follower-label"
+                  id="followers-label-6"
+                  class="radio"
+                />
+              </label>
+            </div>
+            <div class="card-draf-followers">
+              <label for="followers-label-7">
+                <h1>5.000<br />Followers</h1>
+                <p>
+                  5.000 Followers instagram. Followers akan masuk ke akun kamu
+                  dalam waktu kurang lebih 12 jam.
+                </p>
+                <h3>BETA</h3>
+                <input
+                  type="radio"
+                  name="follower-label"
+                  id="followers-label-7"
+                  class="radio"
+                />
+              </label>
+            </div>
+            <div class="card-draf-followers">
+              <label for="followers-label-8">
+                <h1>10.000<br />Followers</h1>
+                <p>
+                  10.000 Followers instagram. Followers akan masuk ke akun kamu
+                  dalam waktu kurang lebih 12 jam.
+                </p>
+                <h3>BETA</h3>
+                <input
+                  type="radio"
+                  name="follower-label"
+                  id="followers-label-8"
+                  class="radio"
+                />
+              </label>
+            </div>
+          </div>
+          <br />
+          <form name="konfirmasi-freeFLWW">
+            <h1>Masukan username instagram</h1>
+            <p>
+              Pastikan kamu memasukan username yang sama dengan akun yang kamu
+              gunakan untuk login!.
+            </p>
+            <br />
+            <div class="username-sc">
+              <input
+                type="text"
+                name="usernamekonfirmasi"
+                class="username"
+                id="username"
+                placeholder="masukan username instagram tanpa @"
+                required
+              />
+              <i class="fa-solid fa-at"></i>
+            </div>
+            <!-- <br /> -->
+            <a>
+              <button type="button" id="showPopupButton">
+                Kirim Followers
+                <i class="fa-solid fa-paper-plane" id="lock"></i>
+              </button>
+            </a>
+
+            <!-- Popup progress -->
+            <div class="popup" id="popup">
+              <p class="text-popup" id="text-popup">
+                <i class="fa-solid fa-circle-notch fa-spin fa-spin-reverse"></i>
+                Memeriksa Username Instagram
+              </p>
+              <div id="progressBar"></div>
+            </div>
+            <!-- berhasil -->
+            <div class="success-followers" id="success-followers">
+              <i class="fa-solid fa-xmark" id="closeSuccessNotif"></i>
+              <h3>
+                <i class="fa-regular fa-circle-check"></i>
+                Followers Berhasil terkirim
+              </h3>
+
+              <p>
+                Followers akan masuk ke akun instagram kamu dalam waktu kurang
+                lebih 12 jam. Hal ini untuk menghindari deteksi spam dari
+                instagram. Pastikan kamu tidak mengganti sandi sebelum followers
+                masuk semua.
+              </p>
+            </div>
+          </form>
+        </div>
+        <!-- likes page -->
+        <div class="card-likes-instagram-page" id="likes-page">
+          <h1>Auto Likes Instagram</h1>
+          <!-- <label for="input-username">URL post</label>
+          <br />
+          <input type="text" id="instagramUrl" />
+          <br />
+          <input
+            type="button"
+            value="Cari Postingan"
+            onclick="cariPostingan()"
+          /> -->
+          <p>Maaf fitur ini masih dalam tahap pengembangan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-footer">
+      <footer>
+        <div class="about-in-footer">
+          <h2>Tentang Kami</h2>
+          <p>
+            FreeFLW adalah website yang menyediakan layanan instagram secara
+            gratis. Salah satu layanan kami yang banyak digunakan adalah
+            penambah followers instagram. layanan kami 100% gratis tanpa ada
+            biaya apapun. layanan kami aktif 24/7 kamu bisa menggunakannya kapan
+            saja dan dimana saja.
+          </p>
+        </div>
+        <div class="link-in-footer">
+          <h2>Link Navigasi</h2>
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#layanan">Layanan</a>
+            </li>
+            <li>
+              <a href="#followers">Free Followers</a>
+            </li>
+            <li>
+              <a href="#tentang">Tentang</a>
+            </li>
+            <li>
+              <a href="#contact">Kontak</a>
+            </li>
+            <li>
+              <a href="./login/login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+        <div class="panduan-pengguna">
+          <h2>Panduan Pengguna</h2>
+          <ul>
+            <li>
+              <a href="#">Cara penggunaan</a>
+            </li>
+            <li>
+              <a href="#">Cara login di freeFLW</a>
+            </li>
+            <li>
+              <a href="#">Menggunakan fitur followers</a>
+            </li>
+            <li>
+              <a href="#">Menggunakan fitur likes</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-in-footer">
+          <h2>Kontak</h2>
+          <ul>
+            <li class="li-contact-in-footer">
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+              </p>
+              <p>
+                916 Southwood Blvd #1b,<br />Incline Village, North Carolina,
+                <br />
+                89451, United States.
+              </p>
+            </li>
+            <li class="li-contact-in-footer">
+              <p>
+                <i class="fa-solid fa-phone"></i>
+              </p>
+              <p>(775) 832-0100</p>
+            </li>
+            <li class="li-contact-in-footer">
+              <p>
+                <i class="fa-solid fa-envelope"></i>
+              </p>
+              <p>freeflw.real@gmail.com</p>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i> FreeFLW - 2023.</p>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e91d75df7f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>
