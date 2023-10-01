@@ -1,0 +1,329 @@
+.for-bg {
+  height: max-content;
+  background-image: url(../assets/bg-landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* layanan kami */
+
+.container-layanan-page {
+  width: 100%;
+  min-height: 700px;
+}
+
+.layanan-page {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 150px 20px 50px 20px;
+  background: none;
+  color: var(--aksen-putih);
+}
+
+.layanan-page h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.layanan-page .all-card-layanan-page {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.all-card-layanan-page .card-layanan-page {
+  max-width: 500px;
+  height: max-content;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: var(--aksen-hitam);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-layanan-page img {
+  max-width: 200px;
+}
+
+.card-layanan-page button {
+  background-color: var(--sekunder);
+  color: var(--aksen-putih);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.card-layanan-page button:hover {
+  cursor: pointer;
+}
+
+/* followers page */
+
+.container-followers-and-likes-page {
+  width: 100%;
+  min-height: 700px;
+}
+
+.followers-and-likes-page {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 150px 20px 150px 20px;
+  background: none;
+  color: var(--aksen-putih);
+}
+
+.card-followers-instagram-page {
+  display: none;
+  /* max-width: 700px; */
+  width: 100%;
+  height: max-content;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: var(--aksen-hitam);
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-followers-instagram-page h1 {
+  text-align: center;
+  color: var(--sekunder);
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.card-followers-instagram-page .draf-all-followers {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.draf-all-followers .card-draf-followers {
+  max-width: 250px;
+  height: max-content;
+  background-color: var(--aksen-putih-terang);
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.draf-all-followers .card-draf-followers:hover {
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.card-draf-followers .radio {
+  /* opacity: 0; */
+}
+
+input:checked ~ .card-draf-followers {
+  background-color: var(--aksen-hitam);
+}
+
+.card-draf-followers h1 {
+  color: var(--sekunder);
+  font-size: 40px;
+}
+
+.card-draf-followers h2 {
+  text-align: start;
+}
+
+.card-followers-instagram-page input {
+  width: 100%;
+  background-color: var(--aksen-putih);
+  padding: 10px;
+  border: 2px solid var(--aksen-hitam);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* likes */
+
+.card-likes-instagram-page {
+  display: none;
+  max-width: 700px;
+  height: max-content;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: var(--aksen-hitam);
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card-likes-instagram-page h1 {
+  text-align: center;
+}
+
+.card-followers-instagram-page .btn-kirim-followers-and-likes {
+  background-color: var(--sekunder);
+  color: var(--aksen-putih);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn-kirim-followers-and-likes:hover {
+  cursor: pointer;
+}
+
+/* progress */
+.popup {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.text-popup {
+  margin-bottom: 10px;
+}
+
+#progressBar {
+  width: 0%;
+  /* background-color: var(--premier); */
+  background-color: #4caf50;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* succes */
+.success-followers {
+  display: none;
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--aksen-hitam);
+  background-color: var(--aksen-putih);
+  /* text-align: start; */
+}
+
+.success-followers h3 {
+  color: #4caf50;
+}
+
+.success-followers #closeSuccessNotif {
+  float: right;
+  font-size: 18px;
+}
+
+/* footer */
+
+.container-footer {
+  width: 100%;
+  height: max-content;
+  background-color: var(--premier);
+}
+
+footer {
+  max-width: 1200px;
+  height: max-content;
+  margin: auto;
+  padding: 80px 20px;
+  background-color: var(--premier);
+  color: var(--aksen-putih);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .about-in-footer {
+  max-width: 400px;
+}
+
+footer ul li {
+  list-style: none;
+  margin: 3px;
+}
+
+footer ul li .active {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--aksen-putih);
+}
+
+footer ul li a {
+  color: var(--aksen-putih);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+footer ul li a:hover {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--aksen-putih);
+}
+
+.li-contact-in-footer {
+  display: flex;
+  gap: 5px;
+}
+
+.copyright {
+  text-align: center;
+  color: var(--aksen-putih);
+  padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  .for-bg {
+    height: max-content;
+    background-image: url(../assets/bg-max-width-700px.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  nav .hidden-ul {
+    max-width: 400px;
+    height: 100vh;
+    padding: 30px;
+    margin-top: 90px;
+    display: inline-block;
+    margin-right: -1000px;
+    background-color: var(--premier);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .show-ul {
+    max-width: 400px;
+    height: 100vh;
+    padding: 30px;
+    margin-top: 90px;
+    margin-right: -100px;
+    background-color: rgba(52, 49, 69, 0.6);
+    border-radius: 40px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav .iconbar {
+    display: block;
+  }
+
+  nav #icon {
+    display: block;
+  }
+}
